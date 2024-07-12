@@ -19,9 +19,10 @@ io.on("connection",(socket)=>{
         io.emit("userdisconnected",socket.id)
     })
 })
+const PORT=3000
 
 app.use(express.static(path.join(__dirname, "public")));
 app.set("view engine","ejs")
-server.listen(3000,()=>{
+server.listen(PORT,()=>{
     console.log("listening at 3000")
 })
